@@ -11,6 +11,8 @@ namespace LibraryModel.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
+        public int CityId { get; set; }
+        public City City { get; set; }
         public DateTime BirthDate { get; set; }
         public ICollection<Order>? Orders { get; set; }
     }
