@@ -1,11 +1,14 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Cozma_Laurentiu_Lab2.Models
+namespace LibraryModel.Models
 {
+    [Table("Book")]
     public class Book
     {
+        [Key]
         public int Id { get; set; }
-        public string Title { get; set; } 
+        public string Title { get; set; }
         public int? AuthorId { get; set; }
         [Column(TypeName = "decimal(6, 2)")]
         public Author? Author { get; set; } 

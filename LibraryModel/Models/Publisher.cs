@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Cozma_Laurentiu_Lab2.Models
+namespace LibraryModel.Models
 {
     public class Publisher
     {
@@ -8,7 +8,7 @@ namespace Cozma_Laurentiu_Lab2.Models
         [Required]
         [Display(Name = "Publisher Name")]
         [StringLength(50)]
-        public string PublisherName { get; set; } 
+        public string PublisherName { get; set; }
 
         [StringLength(70)]
         public string Address { get; set; }

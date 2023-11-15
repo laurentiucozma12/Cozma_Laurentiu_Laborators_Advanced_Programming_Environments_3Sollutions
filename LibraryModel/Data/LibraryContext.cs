@@ -1,26 +1,29 @@
-﻿using Cozma_Laurentiu_Lab2.Models;
+﻿using LibraryModel.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Cozma_Laurentiu_Lab2.Data
+namespace LibraryModel.Data
 {
-    public class LibraryContext:DbContext
+    public class LibraryContext : DbContext
     {
         public LibraryContext(DbContextOptions<LibraryContext> options) : base(options) { }
-        public DbSet<Customer> Customers { get; set; } 
+        public DbSet<Customer> Customers { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Book> Books { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<Publisher> Publishers { get; set; }
         public DbSet<PublishedBook> PublishedBooks { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder) { 
-            modelBuilder.Entity<Customer>().ToTable("Customer"); 
-            modelBuilder.Entity<Order>().ToTable("Order"); 
+            modelBuilder.Entity<Customer>().ToTable("Customer");
+            modelBuilder.Entity<Order>().ToTable("Order");
             modelBuilder.Entity<Book>().ToTable("Book");
-            modelBuilder.Entity<Author>().ToTable("Author"); 
+            modelBuilder.Entity<Author>().ToTable("Author");
             modelBuilder.Entity<Publisher>().ToTable("Publisher");
             modelBuilder.Entity<PublishedBook>().ToTable("PublishedBook");
-            modelBuilder.Entity<PublishedBook>()
-            .HasKey(c => new { c.BookId, c.PublisherId }); //configureaza cheia primara compusa
+            modelBuilder.Entity<PublishedBook>().HasKey(c => new { c.BookId, c.PublisherId }); //configureaza cheia primara compusa
+        }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            base.OnConfiguring(optionsBuilder);
         }
     }
 }
