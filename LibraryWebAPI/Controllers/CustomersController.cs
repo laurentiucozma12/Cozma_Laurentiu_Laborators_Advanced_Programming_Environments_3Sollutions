@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using LibraryModel.Data;
 using LibraryModel.Models;
+using System.Net.Http;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace LibraryWebAPI.Controllers
 {
@@ -15,110 +18,176 @@ namespace LibraryWebAPI.Controllers
     public class CustomersController : ControllerBase
     {
         private readonly LibraryContext _context;
+        private string _baseUrl = "http://localhost:7222/api/Customers";
 
         public CustomersController(LibraryContext context)
         {
             _context = context;
         }
 
-        // GET: api/Customers
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Customer>>> GetCustomers()
+        public async Task<JsonResult> Index()
         {
-          if (_context.Customers == null)
-          {
-              return NotFound();
-          }
-            return await _context.Customers.ToListAsync();
+            var client = new HttpClient();
+            var response = await client.GetAsync(_baseUrl);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var customers = JsonConvert.DeserializeObject<List<Customer>>(await response.Content.ReadAsStringAsync());
+                return new JsonResult(customers);
+            }
+            return new JsonResult(null) { StatusCode = StatusCodes.Status404NotFound };
         }
 
-        // GET: api/Customers/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Customer>> GetCustomer(int id)
+        // GET: api/customers/details/5
+        [HttpGet("details/{id}")]
+        public async Task<JsonResult> Details(int? id)
         {
-          if (_context.Customers == null)
-          {
-              return NotFound();
-          }
-            var customer = await _context.Customers.FindAsync(id);
-
-            if (customer == null)
+            if (id == null)
             {
-                return NotFound();
+                return new JsonResult(null) { StatusCode = StatusCodes.Status400BadRequest };
             }
 
-            return customer;
+            var client = new HttpClient();
+            var response = await client.GetAsync($"{_baseUrl}/details/{id.Value}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                var customer = JsonConvert.DeserializeObject<Customer>(
+                    await response.Content.ReadAsStringAsync());
+                return new JsonResult(customer);
+            }
+
+            return new JsonResult(null) { StatusCode = StatusCodes.Status404NotFound };
         }
 
-        // PUT: api/Customers/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutCustomer(int id, Customer customer)
-        {
-            if (id != customer.Id)
-            {
-                return BadRequest();
-            }
 
-            _context.Entry(customer).State = EntityState.Modified;
+        // POST: api/customers/create
+        [HttpPost("create")]
+        public async Task<JsonResult> Create([FromBody] Customer customer)
+        {
+            if (!ModelState.IsValid)
+            {
+                return new JsonResult(null) { StatusCode = StatusCodes.Status400BadRequest };
+            }
 
             try
             {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!CustomerExists(id))
+                var client = new HttpClient();
+                string json = JsonConvert.SerializeObject(customer);
+                var response = await client.PostAsync($"{_baseUrl}/create",
+                    new StringContent(json, Encoding.UTF8, "application/json"));
+
+                if (response.IsSuccessStatusCode)
                 {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
+                    return new JsonResult(new { success = true }) { StatusCode = StatusCodes.Status200OK };
                 }
             }
-
-            return NoContent();
-        }
-
-        // POST: api/Customers
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<Customer>> PostCustomer(Customer customer)
-        {
-          if (_context.Customers == null)
-          {
-              return Problem("Entity set 'LibraryContext.Customers'  is null.");
-          }
-            _context.Customers.Add(customer);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(GetCustomer), new { id = customer.Id }, customer);
-        }
-
-        // DELETE: api/Customers/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCustomer(int id)
-        {
-            if (_context.Customers == null)
+            catch (Exception ex)
             {
-                return NotFound();
-            }
-            var customer = await _context.Customers.FindAsync(id);
-            if (customer == null)
-            {
-                return NotFound();
+                // Log the exception or handle it accordingly
+                return new JsonResult(new { success = false, message = $"Unable to create record: {ex.Message}" })
+                {
+                    StatusCode = StatusCodes.Status500InternalServerError
+                };
             }
 
-            _context.Customers.Remove(customer);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+            return new JsonResult(new { success = false }) { StatusCode = StatusCodes.Status500InternalServerError };
         }
 
-        private bool CustomerExists(int id)
+        // GET: api/customers/edit/5
+        [HttpGet("edit/{id}")]
+        public async Task<ActionResult> Edit(int? id)
         {
-            return (_context.Customers?.Any(e => e.Id == id)).GetValueOrDefault();
+            if (id == null)
+            {
+                return new BadRequestResult();
+            }
+
+            var client = new HttpClient();
+            var response = await client.GetAsync($"{_baseUrl}/edit/{id.Value}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                var customer = JsonConvert.DeserializeObject<Customer>(
+                    await response.Content.ReadAsStringAsync());
+                return new JsonResult(customer) { StatusCode = StatusCodes.Status200OK };
+            }
+
+            return new NotFoundResult();
         }
+
+        // POST: api/customers/edit
+        [HttpPost("edit")]
+        public async Task<JsonResult> Edit([FromBody] Customer customer)
+        {
+            if (!ModelState.IsValid)
+            {
+                return new JsonResult(null) { StatusCode = StatusCodes.Status400BadRequest };
+            }
+
+            var client = new HttpClient();
+            string json = JsonConvert.SerializeObject(customer);
+            var response = await client.PutAsync($"{_baseUrl}/edit/{customer.Id}",
+                new StringContent(json, Encoding.UTF8, "application/json"));
+
+            if (response.IsSuccessStatusCode)
+            {
+                return new JsonResult(new { success = true }) { StatusCode = StatusCodes.Status200OK };
+            }
+
+            return new JsonResult(new { success = false }) { StatusCode = StatusCodes.Status500InternalServerError };
+        }
+
+        // GET: api/customers/delete/5
+        [HttpGet("delete/{id}")]
+        public async Task<ActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new BadRequestResult();
+            }
+
+            var client = new HttpClient();
+            var response = await client.GetAsync($"{_baseUrl}/delete/{id.Value}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                var customer = JsonConvert.DeserializeObject<Customer>(
+                    await response.Content.ReadAsStringAsync());
+                return new JsonResult(customer) { StatusCode = StatusCodes.Status200OK };
+            }
+
+            return new NotFoundResult();
+        }
+
+        // POST: api/customers/delete
+        [HttpPost("delete")]
+        public async Task<JsonResult> Delete([FromBody] Customer customer)
+        {
+            try
+            {
+                var client = new HttpClient();
+                HttpRequestMessage request =
+                    new HttpRequestMessage(HttpMethod.Delete,
+                        $"{_baseUrl}/delete/{customer.Id}")
+                    {
+                        Content = new StringContent(JsonConvert.SerializeObject(customer),
+                            Encoding.UTF8, "application/json")
+                    };
+                var response = await client.SendAsync(request);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    return new JsonResult(new { success = true }) { StatusCode = StatusCodes.Status200OK };
+                }
+            }
+            catch (Exception ex)
+            {
+                // Log or handle the exception as needed
+            }
+
+            return new JsonResult(new { success = false }) { StatusCode = StatusCodes.Status500InternalServerError };
+        }
+
     }
 }

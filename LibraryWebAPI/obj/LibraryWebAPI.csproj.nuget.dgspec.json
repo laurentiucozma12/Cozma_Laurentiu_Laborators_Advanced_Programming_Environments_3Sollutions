@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Laborator7\\LibraryWebAPI\\LibraryWebAPI.csproj": {}
+    "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Cozma_Laurentiu_Lab7\\LibraryWebAPI\\LibraryWebAPI.csproj": {}
   },
   "projects": {
-    "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Laborator7\\LibraryModel\\LibraryModel.csproj": {
+    "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Cozma_Laurentiu_Lab7\\LibraryModel\\LibraryModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Laborator7\\LibraryModel\\LibraryModel.csproj",
+        "projectUniqueName": "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Cozma_Laurentiu_Lab7\\LibraryModel\\LibraryModel.csproj",
         "projectName": "LibraryModel",
-        "projectPath": "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Laborator7\\LibraryModel\\LibraryModel.csproj",
+        "projectPath": "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Cozma_Laurentiu_Lab7\\LibraryModel\\LibraryModel.csproj",
         "packagesPath": "C:\\Users\\LAU-LAPTOP\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Laborator7\\LibraryModel\\obj\\",
+        "outputPath": "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Cozma_Laurentiu_Lab7\\LibraryModel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual Studio\\3\\NuGetPackages"
@@ -47,11 +47,15 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.13, )"
+              "version": "[7.0.12, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.13, )"
+              "version": "[7.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.12, )"
             }
           },
           "imports": [
@@ -74,14 +78,14 @@
         }
       }
     },
-    "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Laborator7\\LibraryWebAPI\\LibraryWebAPI.csproj": {
+    "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Cozma_Laurentiu_Lab7\\LibraryWebAPI\\LibraryWebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Laborator7\\LibraryWebAPI\\LibraryWebAPI.csproj",
+        "projectUniqueName": "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Cozma_Laurentiu_Lab7\\LibraryWebAPI\\LibraryWebAPI.csproj",
         "projectName": "LibraryWebAPI",
-        "projectPath": "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Laborator7\\LibraryWebAPI\\LibraryWebAPI.csproj",
+        "projectPath": "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Cozma_Laurentiu_Lab7\\LibraryWebAPI\\LibraryWebAPI.csproj",
         "packagesPath": "C:\\Users\\LAU-LAPTOP\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Laborator7\\LibraryWebAPI\\obj\\",
+        "outputPath": "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Cozma_Laurentiu_Lab7\\LibraryWebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual Studio\\3\\NuGetPackages"
@@ -103,8 +107,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Laborator7\\LibraryModel\\LibraryModel.csproj": {
-                "projectPath": "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Laborator7\\LibraryModel\\LibraryModel.csproj"
+              "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Cozma_Laurentiu_Lab7\\LibraryModel\\LibraryModel.csproj": {
+                "projectPath": "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Cozma_Laurentiu_Lab7\\LibraryModel\\LibraryModel.csproj"
               }
             }
           }
@@ -125,45 +129,23 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.13, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.13, )"
-            },
-            "Microsoft.EntityFrameworkCore.InMemory": {
-              "target": "Package",
-              "version": "[7.0.13, )"
+              "version": "[7.0.12, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.13, )"
+              "version": "[7.0.12, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.13, )"
+              "version": "[7.0.12, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[7.0.11, )"
             },
             "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.5.0, )"
-            },
-            "Swashbuckle.AspNetCore.Swagger": {
-              "target": "Package",
-              "version": "[6.5.0, )"
-            },
-            "Swashbuckle.AspNetCore.SwaggerGen": {
-              "target": "Package",
-              "version": "[6.5.0, )"
-            },
-            "Swashbuckle.AspNetCore.SwaggerUI": {
               "target": "Package",
               "version": "[6.5.0, )"
             }

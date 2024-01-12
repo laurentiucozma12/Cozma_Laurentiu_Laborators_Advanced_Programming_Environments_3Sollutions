@@ -1,24 +1,24 @@
-D:\Programming\VS Code Projects\Medii de programare avansate\Laborator7\LibraryModel\bin\Debug\net7.0\LibraryModel.deps.json
-D:\Programming\VS Code Projects\Medii de programare avansate\Laborator7\LibraryModel\bin\Debug\net7.0\LibraryModel.dll
-D:\Programming\VS Code Projects\Medii de programare avansate\Laborator7\LibraryModel\bin\Debug\net7.0\LibraryModel.pdb
-D:\Programming\VS Code Projects\Medii de programare avansate\Laborator7\LibraryModel\obj\Debug\net7.0\LibraryModel.csproj.AssemblyReference.cache
-D:\Programming\VS Code Projects\Medii de programare avansate\Laborator7\LibraryModel\obj\Debug\net7.0\LibraryModel.GeneratedMSBuildEditorConfig.editorconfig
-D:\Programming\VS Code Projects\Medii de programare avansate\Laborator7\LibraryModel\obj\Debug\net7.0\LibraryModel.AssemblyInfoInputs.cache
-D:\Programming\VS Code Projects\Medii de programare avansate\Laborator7\LibraryModel\obj\Debug\net7.0\LibraryModel.AssemblyInfo.cs
-D:\Programming\VS Code Projects\Medii de programare avansate\Laborator7\LibraryModel\obj\Debug\net7.0\LibraryModel.csproj.CoreCompileInputs.cache
-D:\Programming\VS Code Projects\Medii de programare avansate\Laborator7\LibraryModel\obj\Debug\net7.0\LibraryModel.dll
-D:\Programming\VS Code Projects\Medii de programare avansate\Laborator7\LibraryModel\obj\Debug\net7.0\refint\LibraryModel.dll
-D:\Programming\VS Code Projects\Medii de programare avansate\Laborator7\LibraryModel\obj\Debug\net7.0\LibraryModel.pdb
-D:\Programming\VS Code Projects\Medii de programare avansate\Laborator7\LibraryModel\obj\Debug\net7.0\ref\LibraryModel.dll
-D:\Programming\VS Code Projects\Medii de programare avansate\Laborator7 - varianta mea (care nu merge)\LibraryModel\bin\Debug\net7.0\LibraryModel.deps.json
-D:\Programming\VS Code Projects\Medii de programare avansate\Laborator7 - varianta mea (care nu merge)\LibraryModel\bin\Debug\net7.0\LibraryModel.dll
-D:\Programming\VS Code Projects\Medii de programare avansate\Laborator7 - varianta mea (care nu merge)\LibraryModel\bin\Debug\net7.0\LibraryModel.pdb
-D:\Programming\VS Code Projects\Medii de programare avansate\Laborator7 - varianta mea (care nu merge)\LibraryModel\obj\Debug\net7.0\LibraryModel.csproj.AssemblyReference.cache
-D:\Programming\VS Code Projects\Medii de programare avansate\Laborator7 - varianta mea (care nu merge)\LibraryModel\obj\Debug\net7.0\LibraryModel.GeneratedMSBuildEditorConfig.editorconfig
-D:\Programming\VS Code Projects\Medii de programare avansate\Laborator7 - varianta mea (care nu merge)\LibraryModel\obj\Debug\net7.0\LibraryModel.AssemblyInfoInputs.cache
-D:\Programming\VS Code Projects\Medii de programare avansate\Laborator7 - varianta mea (care nu merge)\LibraryModel\obj\Debug\net7.0\LibraryModel.AssemblyInfo.cs
-D:\Programming\VS Code Projects\Medii de programare avansate\Laborator7 - varianta mea (care nu merge)\LibraryModel\obj\Debug\net7.0\LibraryModel.csproj.CoreCompileInputs.cache
-D:\Programming\VS Code Projects\Medii de programare avansate\Laborator7 - varianta mea (care nu merge)\LibraryModel\obj\Debug\net7.0\LibraryModel.dll
-D:\Programming\VS Code Projects\Medii de programare avansate\Laborator7 - varianta mea (care nu merge)\LibraryModel\obj\Debug\net7.0\refint\LibraryModel.dll
-D:\Programming\VS Code Projects\Medii de programare avansate\Laborator7 - varianta mea (care nu merge)\LibraryModel\obj\Debug\net7.0\LibraryModel.pdb
-D:\Programming\VS Code Projects\Medii de programare avansate\Laborator7 - varianta mea (care nu merge)\LibraryModel\obj\Debug\net7.0\ref\LibraryModel.dll
+D:\Programming\VS Code Projects\Medii de programare avansate\LibraryModel\obj\Debug\net7.0\LibraryModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\VS Code Projects\Medii de programare avansate\LibraryModel\obj\Debug\net7.0\LibraryModel.AssemblyInfoInputs.cache
+D:\Programming\VS Code Projects\Medii de programare avansate\LibraryModel\obj\Debug\net7.0\LibraryModel.AssemblyInfo.cs
+D:\Programming\VS Code Projects\Medii de programare avansate\LibraryModel\obj\Debug\net7.0\LibraryModel.csproj.CoreCompileInputs.cache
+D:\Programming\VS Code Projects\Medii de programare avansate\LibraryModel\obj\Debug\net7.0\LibraryModel.csproj.AssemblyReference.cache
+D:\Programming\VS Code Projects\Medii de programare avansate\LibraryModel\bin\Debug\net7.0\LibraryModel.deps.json
+D:\Programming\VS Code Projects\Medii de programare avansate\LibraryModel\bin\Debug\net7.0\LibraryModel.dll
+D:\Programming\VS Code Projects\Medii de programare avansate\LibraryModel\bin\Debug\net7.0\LibraryModel.pdb
+D:\Programming\VS Code Projects\Medii de programare avansate\LibraryModel\obj\Debug\net7.0\LibraryModel.dll
+D:\Programming\VS Code Projects\Medii de programare avansate\LibraryModel\obj\Debug\net7.0\refint\LibraryModel.dll
+D:\Programming\VS Code Projects\Medii de programare avansate\LibraryModel\obj\Debug\net7.0\LibraryModel.pdb
+D:\Programming\VS Code Projects\Medii de programare avansate\LibraryModel\obj\Debug\net7.0\ref\LibraryModel.dll
+D:\Programming\VS Code Projects\Medii de programare avansate\Cozma_Laurentiu_Lab7\LibraryModel\bin\Debug\net7.0\LibraryModel.deps.json
+D:\Programming\VS Code Projects\Medii de programare avansate\Cozma_Laurentiu_Lab7\LibraryModel\bin\Debug\net7.0\LibraryModel.dll
+D:\Programming\VS Code Projects\Medii de programare avansate\Cozma_Laurentiu_Lab7\LibraryModel\bin\Debug\net7.0\LibraryModel.pdb
+D:\Programming\VS Code Projects\Medii de programare avansate\Cozma_Laurentiu_Lab7\LibraryModel\obj\Debug\net7.0\LibraryModel.csproj.AssemblyReference.cache
+D:\Programming\VS Code Projects\Medii de programare avansate\Cozma_Laurentiu_Lab7\LibraryModel\obj\Debug\net7.0\LibraryModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\VS Code Projects\Medii de programare avansate\Cozma_Laurentiu_Lab7\LibraryModel\obj\Debug\net7.0\LibraryModel.AssemblyInfoInputs.cache
+D:\Programming\VS Code Projects\Medii de programare avansate\Cozma_Laurentiu_Lab7\LibraryModel\obj\Debug\net7.0\LibraryModel.AssemblyInfo.cs
+D:\Programming\VS Code Projects\Medii de programare avansate\Cozma_Laurentiu_Lab7\LibraryModel\obj\Debug\net7.0\LibraryModel.csproj.CoreCompileInputs.cache
+D:\Programming\VS Code Projects\Medii de programare avansate\Cozma_Laurentiu_Lab7\LibraryModel\obj\Debug\net7.0\LibraryModel.dll
+D:\Programming\VS Code Projects\Medii de programare avansate\Cozma_Laurentiu_Lab7\LibraryModel\obj\Debug\net7.0\refint\LibraryModel.dll
+D:\Programming\VS Code Projects\Medii de programare avansate\Cozma_Laurentiu_Lab7\LibraryModel\obj\Debug\net7.0\LibraryModel.pdb
+D:\Programming\VS Code Projects\Medii de programare avansate\Cozma_Laurentiu_Lab7\LibraryModel\obj\Debug\net7.0\ref\LibraryModel.dll

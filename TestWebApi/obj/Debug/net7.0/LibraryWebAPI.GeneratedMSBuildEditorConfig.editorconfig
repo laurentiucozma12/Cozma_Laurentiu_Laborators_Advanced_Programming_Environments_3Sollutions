@@ -1,0 +1,37 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = LibraryWebAPI
+build_property.RootNamespace = LibraryWebAPI
+build_property.ProjectDir = D:\Programming\VS Code Projects\Medii de programare avansate\Cozma_Laurentiu_Laborators_Advanced_Programming_Environments_3Sollutions\TestWebApi\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Programming\VS Code Projects\Medii de programare avansate\Cozma_Laurentiu_Laborators_Advanced_Programming_Environments_3Sollutions\TestWebApi
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Programming/VS Code Projects/Medii de programare avansate/Cozma_Laurentiu_Laborators_Advanced_Programming_Environments_3Sollutions/TestWebApi/View/Customers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld1xDdXN0b21lcnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programming/VS Code Projects/Medii de programare avansate/Cozma_Laurentiu_Laborators_Advanced_Programming_Environments_3Sollutions/TestWebApi/View/Customers/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld1xDdXN0b21lcnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programming/VS Code Projects/Medii de programare avansate/Cozma_Laurentiu_Laborators_Advanced_Programming_Environments_3Sollutions/TestWebApi/View/Customers/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld1xDdXN0b21lcnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programming/VS Code Projects/Medii de programare avansate/Cozma_Laurentiu_Laborators_Advanced_Programming_Environments_3Sollutions/TestWebApi/View/Customers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld1xDdXN0b21lcnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programming/VS Code Projects/Medii de programare avansate/Cozma_Laurentiu_Laborators_Advanced_Programming_Environments_3Sollutions/TestWebApi/View/Customers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld1xDdXN0b21lcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

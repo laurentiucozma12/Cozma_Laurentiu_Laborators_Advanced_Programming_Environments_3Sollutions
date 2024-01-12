@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dzgHCeeJtvD17QdzuDqNlrIi3SL/IiFdrc1TUblVCXJH8Hz08fXcqv12wAQP5v2BkYptnmOe5//z7WRwE+O1fA==",
+  "dgSpecHash": "n8guxpSanT0AyqD9nr/RNcRipY5UjiQqjbj8eXk/QRSKUHYleDheWSZxW08vkAIeJa3/CHAiGAR1LHiF4aS15Q==",
   "success": true,
-  "projectFilePath": "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Laborator7\\Cozma_Laurentiu_Lab7\\Cozma_Laurentiu_Lab7.csproj",
+  "projectFilePath": "C:\\Users\\LAU-LAPTOP\\Source\\Repos\\Cozma_Laurentiu_Laborators_Advanced_Programming_Environments_3Sollutions\\Cozma_Laurentiu_Lab7\\Cozma_Laurentiu_Lab7.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LAU-LAPTOP\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\LAU-LAPTOP\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
