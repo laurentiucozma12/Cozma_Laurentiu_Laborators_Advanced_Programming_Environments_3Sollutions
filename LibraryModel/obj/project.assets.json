@@ -3052,11 +3052,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Cozma_Laurentiu_Laborators_Advanced_Programming_Environments_3Sollutions\\LibraryModel\\LibraryModel.csproj",
+      "projectUniqueName": "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Cozma_Laurentiu_Lab7\\LibraryModel\\LibraryModel.csproj",
       "projectName": "LibraryModel",
-      "projectPath": "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Cozma_Laurentiu_Laborators_Advanced_Programming_Environments_3Sollutions\\LibraryModel\\LibraryModel.csproj",
+      "projectPath": "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Cozma_Laurentiu_Lab7\\LibraryModel\\LibraryModel.csproj",
       "packagesPath": "C:\\Users\\LAU-LAPTOP\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Cozma_Laurentiu_Laborators_Advanced_Programming_Environments_3Sollutions\\LibraryModel\\obj\\",
+      "outputPath": "D:\\Programming\\VS Code Projects\\Medii de programare avansate\\Cozma_Laurentiu_Lab7\\LibraryModel\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Visual Studio\\3\\NuGetPackages"
