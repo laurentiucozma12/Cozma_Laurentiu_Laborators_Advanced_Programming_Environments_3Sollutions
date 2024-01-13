@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using LibraryModel.Data;
+using Cozma_Laurentiu_Lab2.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,9 +10,11 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<LibraryContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddSignalR();
+
 var app = builder.Build();
- 
-using (var scope = app.Services.CreateScope()) 
+
+using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
     DbInitializer.Initialize(services);
@@ -35,5 +38,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.MapHub<ChatHub>("/Chat");
 
 app.Run();

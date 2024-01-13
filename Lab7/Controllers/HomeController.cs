@@ -14,6 +14,11 @@ namespace LibraryModel.Controllers
         {
             _context = context;
         }
+        public IActionResult Chat()
+        {
+            return View();
+        }
+
         public async Task<ActionResult> Statistics()
         {
             IQueryable<OrderGroup> data =
