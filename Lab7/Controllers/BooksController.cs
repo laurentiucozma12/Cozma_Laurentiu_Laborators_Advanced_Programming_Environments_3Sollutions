@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using LibraryModel.Data;
 using LibraryModel.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Cozma_Laurentiu_Lab2.Controllers
 {
+    [Authorize(Roles = "Employee")]
     public class BooksController : Controller
     {
         private readonly LibraryContext _context;
@@ -20,6 +22,7 @@ namespace Cozma_Laurentiu_Lab2.Controllers
         }
 
         // GET: Books
+        [AllowAnonymous]
         public async Task<IActionResult> Index(string sortOrder, string currentFilter, string searchString, int? pageNumber)
         {
             ViewData["CurrentSort"] = sortOrder;
@@ -60,12 +63,13 @@ namespace Cozma_Laurentiu_Lab2.Controllers
                     books = books.OrderBy(b => b.Title);
                     break;
             }
-            int pageSize = 2;   
+            int pageSize = 2;
 
             return View(await PaginatedList<Book>.CreateAsync(books.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
 
         // GET: Books/Details/5
+        [AllowAnonymous]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -111,7 +115,7 @@ namespace Cozma_Laurentiu_Lab2.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    _context.Add(book); 
+                    _context.Add(book);
                     await _context.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));
                 }

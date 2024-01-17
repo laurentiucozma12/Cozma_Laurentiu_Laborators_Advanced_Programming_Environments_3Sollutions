@@ -9,9 +9,11 @@ using LibraryModel.Data;
 using LibraryModel.Models;
 using LibraryModel.Models.LibraryViewModels;
 using System.Net;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Cozma_Laurentiu_Lab2.Controllers
 {
+    [Authorize(Policy = "OnlySales")]
     public class PublishersController : Controller
     {
         private readonly LibraryContext _context;
@@ -32,7 +34,7 @@ namespace Cozma_Laurentiu_Lab2.Controllers
                     .ThenInclude(pb => pb.Book)
                     .ThenInclude(i => i.Orders)
                     .ThenInclude(i => i.Customer)
-                                
+
                 .AsNoTracking()
                 .OrderBy(p => p.PublisherName)
                 .ToListAsync();
@@ -102,8 +104,8 @@ namespace Cozma_Laurentiu_Lab2.Controllers
             }
 
             //var publisher = await _context.Publishers
-                //.FindAsync(id);
-            
+            //.FindAsync(id);
+
             var publisher = await _context.Publishers
                     .Include(i => i.PublishedBooks).ThenInclude(i => i.Book)
                  .AsNoTracking()
@@ -121,7 +123,7 @@ namespace Cozma_Laurentiu_Lab2.Controllers
         {
             var allBooks = _context.Books;
             var publisherBooks = new HashSet<int>(publisher.PublishedBooks.Select(c => c.BookId));
-            var viewModel = new List<PublishedBookData>(); 
+            var viewModel = new List<PublishedBookData>();
 
             foreach (var book in allBooks)
             {
@@ -272,14 +274,14 @@ namespace Cozma_Laurentiu_Lab2.Controllers
             {
                 _context.Publishers.Remove(publisher);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool PublisherExists(int id)
         {
-          return (_context.Publishers?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Publishers?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }
