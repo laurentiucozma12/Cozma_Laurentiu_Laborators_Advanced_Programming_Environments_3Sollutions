@@ -7,7 +7,7 @@ using Nume_Pren_Lab2.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container. lab10
+// Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
