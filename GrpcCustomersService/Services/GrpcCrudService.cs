@@ -19,7 +19,7 @@ public class GrpcCrudService : CustomerService.CustomerServiceBase
                         Id = cust.Id,
                         Name = cust.Name,
                         Address = cust.Address,
-                        Birthdate=cust.BirthDate.ToString()
+                        Birthdate = cust.BirthDate.ToString()
                     };
         pl.Item.AddRange(query.ToArray());
         return Task.FromResult(pl);
