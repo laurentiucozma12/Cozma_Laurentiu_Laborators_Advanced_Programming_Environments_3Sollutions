@@ -1,7 +1,7 @@
 ﻿using Grpc.Core;
 using Grpc.Net.Client;
 using GrpcCustomersService;
-using LibraryModel.Models;
+//using LibraryModel.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cozma_Laurentiu_Lab2.Controllers
@@ -54,7 +54,7 @@ namespace Cozma_Laurentiu_Lab2.Controllers
         [HttpPost]
         public IActionResult Edit(int id, Customer customer)
         {
-            if (id != customer.CustomerId)
+            if (id != customer.Id)
             {
                 return NotFound();
             }
